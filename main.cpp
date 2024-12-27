@@ -1,5 +1,8 @@
 #include <iostream>
+#define GLFW_INCLUDE_NONE
 #include <GLFW/glfw3.h>
+#include <glad/glad.h>
+
 
 void error_callback(int error, const char* description) {
   fprintf(stderr, "Error: %s\n", description);
@@ -34,8 +37,9 @@ int main() {
     return 1;
   }
   glfwMakeContextCurrent(window);
-
   glfwSetKeyCallback(window, key_callback);
+
+  gladLoadGL();
 
   while (!glfwWindowShouldClose(window)) {
     glfwPollEvents();

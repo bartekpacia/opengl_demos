@@ -9,4 +9,6 @@ find_package(OpenGL REQUIRED)
 
 add_executable(glfw_demo main.cpp)
 
-target_link_libraries(glfw_demo glfw OpenGL::GL)
+add_subdirectory(glad/)
+
+target_link_libraries(glfw_demo glfw OpenGL::GL glad)
