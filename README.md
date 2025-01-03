@@ -49,3 +49,9 @@ glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 > [!NOTE]
 >
 > Turns out there's quite a good official wiki on OpenGL: https://www.khronos.org/opengl/wiki/Main_Page.
+
+### Buffer types
+
+GL_ARRAY_BUFFER stores vertices.
+
+GL_ELEMENT_ARRAY_BUFFER stores indices.
